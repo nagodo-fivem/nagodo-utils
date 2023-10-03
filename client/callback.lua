@@ -4,7 +4,6 @@ function TriggerCallbackSync(name, ...)
         promise:resolve(...)
     end, ...)
     local result = Citizen.Await(promise)
-    
     return result
 end
 

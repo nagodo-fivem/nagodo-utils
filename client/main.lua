@@ -1,12 +1,13 @@
 function NAGODO_UTILS_CLIENT()
     local self = {}
 
+    -- CLIENT CALLBACK --
     self.TriggerCallbackSync = function(name, ...)
-        TriggerCallbackSync(name, ...)
+        return TriggerCallbackSync(name, ...)
     end
 
     self.TriggerCallback = function(name, cb, ...)
-        TriggerCallback(name, cb, ...)
+        return TriggerCallback(name, cb, ...)
     end
 
     return self

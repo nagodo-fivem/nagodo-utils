@@ -1,6 +1,7 @@
 function NAGODO_UTILS_SERVER()
     local self = {}
 
+    -- SERVER CALLBACK --
     self.CreateCallback = function(name, cb)
         CreateCallback(name, cb)
     end
