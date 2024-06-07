@@ -1,4 +1,4 @@
-function NAGODO_UTILS_CLIENT()
+local function NAGODO_UTILS()
     local self = {}
 
     -- CLIENT CALLBACK --
@@ -10,7 +10,18 @@ function NAGODO_UTILS_CLIENT()
         return TriggerCallback(name, cb, ...)
     end
 
+    -- Random --
+    self.RandomStr = function(length)
+        return RandomStr(length)
+    end
+
+    self.RandomInt = function(length)
+        return RandomInt(length)
+    end
+
     return self
 end
 
-
+exports('GetUtils', function()   
+    return NAGODO_UTILS()
+end)
